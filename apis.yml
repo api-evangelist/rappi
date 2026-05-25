@@ -1,0 +1,208 @@
+aid: rappi
+name: Rappi
+description: >-
+  Rappi is a Colombian-founded pan-Latin American super-app headquartered in
+  Bogotá, with regional hubs in São Paulo and Mexico City. Founded in 2015 by
+  Simón Borrero, Sebastián Mejía, and Felipe Villamarín, and accelerated through
+  Y Combinator's W16 batch, Rappi operates across Argentina, Brazil, Chile,
+  Colombia, Costa Rica, Ecuador, Mexico, Peru, and Uruguay. The platform bundles
+  on-demand delivery (restaurants, groceries via "Súper" and Turbo Fresh,
+  pharmacies, retail, alcohol) with consumer fintech (RappiPay, RappiCard,
+  RappiCash) and adjacent services such as RappiTravel and the RappiPrime
+  subscription. Rappi's developer surface is operated through its Partners
+  program at dev-portal.rappi.com, where approved restaurants, retailers, and
+  middleware providers obtain OAuth 2.0 client credentials to integrate with a
+  REST API for menu and catalog management, store availability, order lifecycle
+  events, financial reconciliation, and webhook subscriptions. Access is not
+  self-serve — a Rappi business contact must approve onboarding, after which
+  partners receive development-environment credentials and an integration path
+  to production. SoftBank-backed since 2019, Rappi competes regionally with
+  iFood, Uber Eats, and DiDi Food, with fintech ambitions overlapping Nubank,
+  Mercado Pago, and regional neobanks.
+type: Index
+position: Provider
+access: 3rd-Party
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Delivery
+  - Food Delivery
+  - Grocery Delivery
+  - On-Demand
+  - Last Mile
+  - Logistics
+  - Super App
+  - Fintech
+  - Payments
+  - Marketplace
+  - Latin America
+  - Colombia
+url: https://raw.githubusercontent.com/api-evangelist/rappi/refs/heads/main/apis.yml
+created: '2026-05-24'
+modified: '2026-05-24'
+specificationVersion: '0.20'
+apis:
+  - aid: rappi:partners-api
+    name: Rappi Partners REST API
+    description: >-
+      The Rappi Partners REST API is the integration surface used by approved
+      restaurants, grocery and retail merchants, and middleware/POS providers
+      to operate on the Rappi marketplace. Authentication is OAuth 2.0
+      client-credentials — partners receive a client_id and client_secret from
+      Rappi after manual onboarding, exchange them at
+      POST token/login/integrations for a bearer access token, and re-issue the
+      token at least weekly. The API exposes endpoints for menu and catalog
+      management, product and store availability toggling, retrieving store
+      data, accepting and progressing user orders, and a separate Financial
+      surface for reconciliation. A parallel "Rests API" track covers the same
+      operations for the restaurant vertical. Webhook events deliver order
+      lifecycle and store updates to partner-hosted callback URLs. Rappi
+      enforces a 45-second minimum gap between requests and expects integrators
+      to maintain a 98% API success rate; production access is gated on
+      certification by the Rappi integrations team.
+    image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    humanURL: https://dev-portal.rappi.com/
+    tags:
+      - Orders
+      - Menus
+      - Catalog
+      - Availability
+      - Stores
+      - Webhooks
+      - Financial
+      - OAuth
+      - REST
+    properties:
+      - type: Documentation
+        url: https://dev-portal.rappi.com/
+      - type: APIReference
+        url: https://dev-portal.rappi.com/en/api-reference/
+      - type: GettingStarted
+        url: https://dev-portal.rappi.com/en/api-reference/
+      - type: Authentication
+        url: https://dev-portal.rappi.com/en/api-reference/authentication/
+      - type: Webhooks
+        url: https://dev-portal.rappi.com/en/api-reference/webhooks/
+common:
+  - type: Website
+    url: https://www.rappi.com/
+  - type: About
+    url: https://about.rappi.com/about-us
+  - type: DeveloperPortal
+    url: https://dev-portal.rappi.com/
+  - type: APIReference
+    url: https://dev-portal.rappi.com/en/api-reference/
+  - type: Authentication
+    url: https://dev-portal.rappi.com/en/api-reference/authentication/
+  - type: Webhooks
+    url: https://dev-portal.rappi.com/en/api-reference/webhooks/
+  - type: IntegrationStandards
+    url: https://dev-portal.rappi.com/integration-standards/
+  - type: FAQ
+    url: https://dev-portal.rappi.com/en/faqs/
+  - type: Deprecations
+    url: https://dev-portal.rappi.com/en/deprecations/
+  - type: Merchants
+    url: https://merchants.rappi.com/
+  - type: StoreSignUp
+    url: https://mitienda.rappi.com.mx/
+  - type: Couriers
+    url: https://soyrappi.com.mx/
+  - type: RappiPay
+    url: https://www.rappipay.mx/
+  - type: Blog
+    url: https://blog.rappi.com/
+  - type: GitHubOrganization
+    url: https://github.com/rappiinc
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/rappi
+  - type: YCombinator
+    url: https://www.ycombinator.com/companies/rappi
+  - type: Features
+    data:
+      - name: On-Demand Delivery
+        description: >-
+          Restaurant, grocery (Súper), pharmacy, retail, and alcohol delivery
+          fulfilled by the Rappi courier fleet across nine LatAm countries.
+      - name: Turbo Fresh
+        description: >-
+          Sub-15-minute grocery and convenience delivery from Rappi-operated
+          dark stores in major metropolitan areas.
+      - name: RappiPay & RappiCard
+        description: >-
+          Consumer fintech wallet, debit, and co-branded credit card products
+          embedded in the super-app and operated as regulated entities in
+          select markets.
+      - name: RappiTravel
+        description: >-
+          In-app flights, hotels, and travel booking surface integrated with
+          the Rappi wallet and loyalty stack.
+      - name: RappiPrime Subscription
+        description: >-
+          Recurring membership offering free delivery, exclusive discounts,
+          and partner perks across the super-app verticals.
+      - name: Partners Developer Portal
+        description: >-
+          OAuth-secured REST API for menus, availability, orders, stores,
+          financial reconciliation, and webhooks, gated behind manual partner
+          onboarding.
+  - type: UseCases
+    data:
+      - name: POS & Aggregator Integration
+        description: >-
+          Restaurant POS vendors and order aggregators sync menus and
+          push/pull orders between merchant systems and Rappi storefronts.
+      - name: Grocery & Retail Catalog Sync
+        description: >-
+          Supermarket and convenience chains keep large SKU catalogs and
+          real-time stock availability synchronized with Rappi store pages.
+      - name: Order Lifecycle Automation
+        description: >-
+          Brands receive Rappi orders via webhook, route them to kitchen or
+          fulfillment systems, and progress status back through the API.
+      - name: Financial Reconciliation
+        description: >-
+          Merchants pull payout, commission, and settlement data through the
+          Financial endpoints for accounting and FP&A pipelines.
+      - name: Last-Mile as a Service
+        description: >-
+          Enterprise brands tap the Rappi courier fleet for branded
+          last-mile delivery in LatAm metros.
+  - type: Integrations
+    data:
+      - name: Restaurant POS Systems
+        description: >-
+          Middleware providers connect kitchen and POS platforms to the Rappi
+          Rests API for menu and order flow.
+      - name: Grocery & Retail ERPs
+        description: >-
+          Catalog, pricing, and inventory systems push availability updates
+          through the Partners API.
+      - name: Payment Networks
+        description: >-
+          RappiPay and RappiCard integrate with regional card networks and
+          local payment rails per country.
+      - name: Travel Suppliers
+        description: >-
+          RappiTravel aggregates flight and hotel inventory from third-party
+          GDS and travel partners.
+  - type: Solutions
+    data:
+      - name: Restaurants
+        description: >-
+          Onboarding, menu management, order capture, and reconciliation
+          tools for restaurant brands on the Rappi marketplace.
+      - name: Grocery & Retail
+        description: >-
+          Catalog, stock, and store-availability tooling for supermarket,
+          convenience, and specialty retail partners.
+      - name: Brands & Enterprises
+        description: >-
+          Last-mile fulfillment and Rappi-native commerce for enterprise
+          brands seeking LatAm coverage.
+      - name: Consumers
+        description: >-
+          The Rappi super-app for delivery, fintech, travel, and Prime
+          subscription benefits across nine countries.
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
