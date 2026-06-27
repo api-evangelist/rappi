@@ -2,10 +2,11 @@
   "repo": "rappi",
   "feeds": [
     {
-      "source": "https://www.rappipay.mx/",
-      "error": "URLError"
+      "source": "https://blog.rappi.com/",
+      "saved": 0,
+      "error": "DNS ENOTFOUND blog.rappi.com"
     }
   ],
   "post_count": 0,
-  "fetched": "2026-06-14T20:42:17Z"
+  "fetched": "2026-06-27T13:04:24Z"
 }
