@@ -83,6 +83,8 @@ apis:
       - type: Webhooks
         url: https://dev-portal.rappi.com/en/api-reference/webhooks/
 common:
+  - type: DomainSecurity
+    url: security/rappi-domain-security.yml
   - type: Website
     url: https://www.rappi.com/
   - type: About
