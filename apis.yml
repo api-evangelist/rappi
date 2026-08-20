@@ -73,6 +73,16 @@ apis:
     image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
     humanURL: https://dev-portal.rappi.com/
     tags:
+      - Order
+      - Menus
+      - Catalog
+      - Availability
+      - Stores
+      - Webhook
+      - Financial
+      - Authentication
+      - REST
+    tags_raw:
       - Orders
       - Menus
       - Catalog
