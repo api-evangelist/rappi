@@ -50,6 +50,20 @@ tags:
   - Food Delivery
   - Grocery Delivery
   - On-Demand
+  - Last Mile Delivery
+  - Logistics
+  - Super App
+  - Fintech
+  - Payments
+  - Marketplace
+  - Latin America
+  - Colombia
+  - Restaurant
+tags_raw:
+  - Delivery
+  - Food Delivery
+  - Grocery Delivery
+  - On-Demand
   - Last Mile
   - Logistics
   - Super App
@@ -58,6 +72,7 @@ tags:
   - Marketplace
   - Latin America
   - Colombia
+  - Restaurant
 url: https://raw.githubusercontent.com/api-evangelist/rappi/refs/heads/main/apis.yml
 created: '2026-05-24'
 modified: '2026-05-24'
@@ -90,7 +105,7 @@ apis:
       - Availability
       - Stores
       - Webhook
-      - Financial
+      - Finance
       - Authentication
       - REST
     tags_raw:
